@@ -6,7 +6,7 @@
 
     <groupId>com.siliqon</groupId>
     <artifactId>CosmicCosmetics</artifactId>
-    <version>2.1.2</version>
+    <version>2.2.0</version>
     <packaging>jar</packaging>
 
     <name>CosmicCosmetics</name>
@@ -32,7 +32,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.3</version>
+                <version>3.6.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -50,10 +50,12 @@
                                     <pattern>co.aikar.locales</pattern>
                                     <shadedPattern>com.siliqon.cosmiccosmetics.locales</shadedPattern>
                                 </relocation>
+                                <!--
                                 <relocation>
                                     <pattern>com.jeff_media.updatechecker</pattern>
                                     <shadedPattern>com.siliqon.cosmiccosmetics.updatechecker</shadedPattern>
                                 </relocation>
+                                -->
                             </relocations>
                         </configuration>
                     </execution>
@@ -99,7 +101,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.21.1-R0.1-SNAPSHOT</version>
+            <version>1.21.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -107,12 +109,14 @@
             <artifactId>acf-paper</artifactId>
             <version>0.5.1-SNAPSHOT</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>com.jeff_media</groupId>
             <artifactId>SpigotUpdateChecker</artifactId>
-            <version>3.0.3</version>
+            <version>3.0.4</version>
             <scope>compile</scope>
         </dependency>
+        -->
         <dependency>
             <groupId>de.exlll</groupId>
             <artifactId>configlib-paper</artifactId>

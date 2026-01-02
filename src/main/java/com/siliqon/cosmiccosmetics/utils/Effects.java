@@ -91,14 +91,17 @@ public class Effects {
         playerData.addEffect(form, type);
         if (!plugin.playerActiveEffects.containsKey(player.getUniqueId())) plugin.playerActiveEffects.put(player.getUniqueId(), playerData);
         switch (form) {
-            case EffectForm.PROJECTILE: {
+            case PROJECTILE: {
                 Projectile.startForPlayer(player);
+                break;
             }
-            case EffectForm.TRAIL: {
+            case TRAIL: {
                 Trail.startForPlayer(player);
+                break;
             }
-            case EffectForm.HALO: {
+            case HALO: {
                 Halo.startForPlayer(player);
+                break;
             }
             // kill is event based
         }

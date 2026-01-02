@@ -9,7 +9,7 @@ public class EffectParticleRegistry extends Registry<EffectType, Particle> {
 
     public void populate() {
         this.register(EffectType.SPLASH, Particle.SPLASH);
-        this.register(EffectType.ENDER, Particle.DRAGON_BREATH);
+        this.register(EffectType.ENDER, Particle.END_ROD);
         this.register(EffectType.FLAME, Particle.FLAME);
         this.register(EffectType.CHARM, Particle.HAPPY_VILLAGER);
         this.register(EffectType.LOVE, Particle.HEART);
@@ -18,7 +18,7 @@ public class EffectParticleRegistry extends Registry<EffectType, Particle> {
         this.register(EffectType.TEARS, Particle.FALLING_WATER);
         this.register(EffectType.MUSICAL, Particle.NOTE);
         this.register(EffectType.RAINBOW, Particle.DUST);
-        this.register(EffectType.CLOUDY, Particle.EFFECT);
+        this.register(EffectType.CLOUDY, Particle.CLOUD);
     }
 
     public static EffectParticleRegistry getInstance() {

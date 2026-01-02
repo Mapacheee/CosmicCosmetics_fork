@@ -1,8 +1,8 @@
 package com.siliqon.cosmiccosmetics;
 
 import co.aikar.commands.PaperCommandManager;
-import com.jeff_media.updatechecker.UpdateCheckSource;
-import com.jeff_media.updatechecker.UpdateChecker;
+//import com.jeff_media.updatechecker.UpdateCheckSource;
+//import com.jeff_media.updatechecker.UpdateChecker;
 import com.siliqon.cosmiccosmetics.commands.CosmeticsCommand;
 import com.siliqon.cosmiccosmetics.custom.ActiveEffectData;
 import com.siliqon.cosmiccosmetics.enums.EffectForm;
@@ -101,12 +101,14 @@ public final class CosmicCosmetics extends JavaPlugin {
         registerCommands();
 
         // check for plugin updates
+        /*
         new UpdateChecker(this, UpdateCheckSource.SPIGET, SPIGOT_RESOURCE_ID)
                 .setNotifyOpsOnJoin(config.getNotifyUpdates())
                 .setDownloadLink("https://www.spigotmc.org/resources/"+SPIGOT_RESOURCE_ID)
                 .checkEveryXHours(12)
                 .checkNow()
                 .onFail(((commandSenders, e) -> logError("Failed to check for plugin updates!")));
+        */
 
         getOnlinePlayerData(); // protect data vanishing into thin air during /reload
         log(PLUGIN_VERSION+ " enabled successfully");
@@ -161,12 +163,15 @@ public final class CosmicCosmetics extends JavaPlugin {
             switch (form) {
                 case PROJECTILE: {
                     Projectile.startForPlayer(player);
+                    break;
                 }
                 case TRAIL: {
                     Trail.startForPlayer(player);
+                    break;
                 }
                 case HALO: {
                     Halo.startForPlayer(player);
+                    break;
                 }
             }
         }
