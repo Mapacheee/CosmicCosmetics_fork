@@ -100,16 +100,6 @@ public final class CosmicCosmetics extends JavaPlugin {
         registerCommandCompletions();
         registerCommands();
 
-        // check for plugin updates
-        /*
-        new UpdateChecker(this, UpdateCheckSource.SPIGET, SPIGOT_RESOURCE_ID)
-                .setNotifyOpsOnJoin(config.getNotifyUpdates())
-                .setDownloadLink("https://www.spigotmc.org/resources/"+SPIGOT_RESOURCE_ID)
-                .checkEveryXHours(12)
-                .checkNow()
-                .onFail(((commandSenders, e) -> logError("Failed to check for plugin updates!")));
-        */
-
         getOnlinePlayerData(); // protect data vanishing into thin air during /reload
         log(PLUGIN_VERSION+ " enabled successfully");
     }
